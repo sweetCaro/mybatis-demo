@@ -12,5 +12,4 @@ public class Manager {
     public int age;
     public String address;
     public String workerName;
-
 }
