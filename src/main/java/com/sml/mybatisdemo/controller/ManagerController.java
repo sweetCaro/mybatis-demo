@@ -14,7 +14,6 @@ import java.util.List;
 public class ManagerController {
     @Autowired
     ManagerService managerService;
-
     @GetMapping(value = "/getAllWorker")
     public List<Manager> getAllManager(){
         return managerService.getAllManager();
@@ -23,5 +22,4 @@ public class ManagerController {
     public void addManager(@RequestBody Manager manager){
         managerService.insert(manager);
     }
-
 }
