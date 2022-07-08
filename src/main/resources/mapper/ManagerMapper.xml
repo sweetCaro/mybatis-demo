@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sml.mybatisdemo.dao.ManagerDao">
+    <select id="getAllManager" resultType="com.sml.mybatisdemo.domin.Manager" >
+        SELECT * FROM worker;
+    </select>
+
+    <insert id="insert" parameterType="com.sml.mybatisdemo.domin.Manager" useGeneratedKeys="true" keyProperty="managerId">
+        insert into
+            manager(workerID,warehouseID,Email, phoneNum,sex,age,address,workerName)
+        values
+            (#{workerID},#{warehouseID},#{Email},#{phoneNum},#{sex},#{age},#{address},#{workerName})
+    </insert>
+
+</mapper>
